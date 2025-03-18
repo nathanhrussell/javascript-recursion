@@ -11,8 +11,6 @@ function fibs(n) {
     return sequence;
 }
 
-console.log(fibs(4));
-
 function fibsRecursive(n, sequence = [0, 1]) {
     if (n <= 0) return [];
     if (n === 1) return [0];
@@ -23,4 +21,11 @@ function fibsRecursive(n, sequence = [0, 1]) {
     return fibsRecursive(n -1, [...sequence, nextFib]);
 }
 
-console.log(fibsRecursive(4));
+
+function printRecursively(x) {
+    if (x <= 0) return;
+    console.log("This was printed recursively");
+    printRecursively(x - 1);
+  }
+  
+  printRecursively(8);
